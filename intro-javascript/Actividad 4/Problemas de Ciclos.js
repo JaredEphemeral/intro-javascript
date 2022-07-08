@@ -53,6 +53,7 @@ let numeroRNG2 = 0;
 let total = 0;
 let respuestaUsuario = 0;
 let controlDoWhile = true
+let vidas = 3;
 do{
     do{
         numeroRNG1 = Math.floor(Math.random() * 10);
@@ -69,6 +70,14 @@ do{
         alert("Ganaste!");
     }
     else{
-        alert("Intentalo de nuevo.");
+        
+        vidas--;
+        if(vidas > 0){
+            alert("Intentalo de nuevo. Te quedan " + vidas + " vidas.");
+        }            
+        else{
+            alert("Perdiste.");
+            controlDoWhile = false
+        }
     }
 }while(controlDoWhile);
