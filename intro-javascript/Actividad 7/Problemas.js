@@ -9,13 +9,8 @@ else{
 }
 
 function buscador(oracion, buscar){
-    if(oracion.includes(buscar)){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
+    return oracion.includes(buscar);
+} 
 
 /*Problema 2*/
 const numbers = [1,2,3,4,10,11];
@@ -50,6 +45,7 @@ function esPalindromo(palabra){
     return nuevaPalabra
 }
 
+
 /*Problema 4*/
 let oracion2 = prompt("Ingrese una oración: ");
 let letraBuscar = prompt("Ingrese una letra a buscar en la oración: ");
@@ -64,6 +60,7 @@ function buscarOcurrencias(oracion, letra){
     }
     return contador;
 }
+
 /*Problema 5*/
 let arr = [45,56,32,98,1000,5,23];
 let numeroMayor = buscarNumeroMayor(arr);
