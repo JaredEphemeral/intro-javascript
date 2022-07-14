@@ -17,8 +17,8 @@ console.log(resultado);
 const input2 = [12, 46, 32, 64];
 var arr2 =[];
 var obj ={
-    "mean": ( arr2 = input2.reduce( (suma, valorActual ) => (Number(suma) + Number(valorActual) / input2.length ), arr2 ) ) ,
-    "median": ( input2[Math.floor(input2.length/2)])
+    mean: ( arr2 = input2.reduce( (suma, valorActual ) => (Number(suma) + Number(valorActual) / input2.length ), arr2 ) ) ,
+    median: ( input2[Math.floor(input2.length/2)])
 }
 console.log(obj);
 
@@ -27,7 +27,7 @@ console.log(obj);
 //Caso de prueba:
 //`const input = 6;`
 //Result: `720`
-//Solución:
+//Solución: 
 function factorial(num){
     let total = 1;
     for(i = 1; i<=num; i++){
