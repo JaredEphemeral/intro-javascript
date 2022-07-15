@@ -1,39 +1,43 @@
 let resultado = document.getElementById("resultado");
 let primerNumero = 0;
 let idOperacion = 0;
+let yaEsDecimal = false;
 
 function numero(numero){
     if(!(resultado.textContent.length > 10))
     {
-        if(!(resultado.textContent== '0')){
-            resultado.textContent += numero;
+        if(!(resultado.textContent == '0')){
+            if(numero != '.'){
+                resultado.textContent += numero;
+            }
+            else{
+                if(!yaEsDecimal){
+                    resultado.textContent += numero;
+                    yaEsDecimal = true;
+                }
+            }
         }
         else{
-            resultado.textContent = numero;
+            if(numero != '.'){
+                resultado.textContent = numero;
+            }
+            else{
+                resultado.textContent += numero;
+                yaEsDecimal = true;
+            }
         }
     }
 }
 
 function operacion(id){
-    primerNumero = Number(resultado.textContent);
-    switch(id){
-        case 1: //suma
-            idOperacion = 1;
-            resultado.textContent = "0";
-            break;
-        case 2: //resta
-            idOperacion = 2;
-            resultado.textContent = "0";
-            break;
-        case 3: //multiplicación
-            idOperacion = 3;
-            resultado.textContent = "0";
-            break;
-        case 4: //divición
-            idOperacion = 4;
-            resultado.textContent = "0";
-            break;
+    if(idOperacion != 0)
+    {
+        igualar();
     }
+    primerNumero = Number(resultado.textContent);
+    yaEsDecimal = false;
+    idOperacion = id;
+    resultado.textContent = "0";
     resultado.textContent = calculo;
 }
 
@@ -41,6 +45,7 @@ function borradoTotal(){
     resultado.textContent = "0";
     primerNumero = 0;
     idOperacion = 0;
+    yaEsDecimal = false;
 }
 
 function igualar(){
@@ -55,16 +60,17 @@ function igualar(){
             case 3: //multiplicación
                 resultado.textContent = primerNumero * Number(resultado.textContent);
                 break;
-            case 4: //divición
+            case 4: //división
                 if( Number(resultado.textContent) === 0 ){
-                    resultado.textContent = "ERROR: Divición entre cero.";
+                    resultado.textContent = "Indefinido.";
                 }
                 else{
-                    resultado.textContent = primerNumero + Number(resultado.textContent);
+                    resultado.textContent = primerNumero / Number(resultado.textContent);
                 }
                 break;
         }
         primerNumero = 0;
         idOperacion = 0;
+        yaEsDecimal = false;
     }
 }
