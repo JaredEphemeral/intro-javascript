@@ -1,0 +1,35 @@
+
+body{ 
+    background-color: #000000; 
+}
+
+.calculadora{
+    border: 3px rgb(116, 114, 114) solid; 
+    width: 250px;
+}
+
+.medio{
+    text-align: left;
+    position: relative; 
+    left: 50px;
+}
+
+.abajo{
+    text-align: center;
+}
+
+#resultado { 
+    width: 145px; 
+    border: 2px black solid; 
+    text-align: right; 
+    position: relative; 
+    left: 47px;  
+    padding: 0px 5px;
+    background-color: white;  
+}
+
+.calculadora [type=button] { 
+    width: 35px; 
+    height: 30px;
+    padding: 0;  
+}
