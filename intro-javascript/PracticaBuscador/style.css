@@ -1,0 +1,8 @@
+.bg-transformers{
+    background-image: url(./background.png);
+}
+
+.object-fit{
+    object-fit:cover;
+    height: 100%;
+}
