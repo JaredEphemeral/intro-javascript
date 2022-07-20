@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- Parte Superior  -->
     <header class = "bg-transformers">
         <div class="container">
             <!-- Arriba  -->
             <div class="row bg-secondary ">
-
+                <!-- Header  -->
                 <div class="col-6 text-white">
                     <div class="d-flex align-items-center h-100">
                         <h4 class="mb-0">Buscador JS</h4>
-                    </div>
-                    
+                    </div>             
                 </div>
-
+                <!-- Navs  -->
                 <div class="col-6">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
@@ -33,19 +33,14 @@
                         </li>
                       </ul>
                 </div>
-
-
             </div>
-
-
-            <!-- Medio  -->
+            <!-- Abajo  -->
             <div class="row">
                 <div class="col">
                     <h1 class="text-center pt-5 text-white">Buscador JS</h1>
                     <div class="card my-5 p-4 ">
                         <form id="form-busqueda">
-
-                            <div class="row">
+                            <div class="row row-cols-1 row-cols-md-4 ">
 
                                 <div class="col">
                                     <label for="inputName">Nombre</label>
@@ -76,7 +71,7 @@
                                     </select>
                                 </div>
 
-                                <div class="col d-flex align-items-end ">
+                                <div class="col d-flex align-items-end my-3 my-md-0 ">
                                     <button type = "summit"  class = "btn btn-success w-100 ">Buscar</button>
                                 </div>
 
@@ -88,11 +83,11 @@
             </div>
         </div>
     </header>
-
+    <!-- Parte Inferior  -->
     <main class="bg-dark text-white py-5">
-
         <div class="container">
-            <div id="box-transformers" class="row row-cols-2">
+            <div id="box-transformers" class="row row-cols-1 row-cols-lg-2">
+                <!-- Primer Cuadro  -->
                 <div class="col mb-3">
                     <div class="card bg-secondary flex-row">
                         <div class="w-50" > 
@@ -106,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Segundo Cuadro  -->
                 <div class="col mb-3">
                     <div class="card bg-secondary flex-row">
                         <div class="w-50" > 
@@ -120,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Tercer Cuadro  -->
                 <div class="col mb-3">
                     <div class="card bg-secondary flex-row">
                         <div class="w-50" > 
@@ -136,8 +131,6 @@
                 </div>
             </div>
         </div>
-
     </main>
-
   </body>
 </html>
